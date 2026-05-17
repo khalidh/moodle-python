@@ -1,0 +1,50 @@
+nom: geometrie_seconde_short
+niveau: seconde_generale
+matiere: mathematiques
+theme: geometrie_analytique
+
+prompt: |
+  Ta mission :
+  Creer une formation courte de geometrie analytique pour la classe de seconde generale francaise.
+
+  Le resultat doit etre un JSON strictement valide, sans texte avant ni apres.
+
+  Le JSON doit respecter cette structure :
+
+  {
+    "title": "Titre de la formation",
+    "description": "Description courte",
+    "chapters": [
+      {
+        "title": "Titre du chapitre",
+        "content": "Contenu HTML du chapitre",
+        "questions": [
+          {
+            "question": "Question ouverte",
+            "hidden_answer": "Reponse detaillee cachee"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Question du quiz",
+            "choices": ["Choix 1", "Choix 2", "Choix 3", "Choix 4"],
+            "answer": "Bonne reponse",
+            "explanation": "Explication detaillee"
+          }
+        ]
+      }
+    ]
+  }
+
+  Contraintes :
+  - Generer exactement 1 chapitre.
+  - Le chapitre contient exactement 2 questions ouvertes.
+  - Le chapitre contient exactement 2 questions de quiz.
+  - Chaque quiz contient exactement 4 choix.
+  - La bonne reponse correspond exactement a un choix.
+  - Ne pas mettre de correction de quiz dans le champ "content".
+  - Ne pas ajouter de balise <details> dans les champs "answer" et "explanation" des quiz.
+  - Utiliser uniquement les balises HTML suivantes dans "content" et "hidden_answer" :
+    <h2>, <h3>, <p>, <ul>, <li>, <strong>, <em>, <details>, <summary>
+  - Toutes les expressions mathematiques doivent etre encadrees avec \\(...\\) ou \\[...\\].
+

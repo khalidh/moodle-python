@@ -1,0 +1,15 @@
+.env
+.git-local/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+
+credentials.json
+token.pickle
+secrets/
+
+output/*.json
+output/*.xml

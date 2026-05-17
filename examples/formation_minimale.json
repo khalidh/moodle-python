@@ -1,0 +1,35 @@
+{
+  "title": "Mini formation - Geometrie analytique",
+  "description": "Exemple court de formation Moodle pour tester le pipeline sans appel OpenAI.",
+  "chapters": [
+    {
+      "title": "Coordonnees d'un point",
+      "content": "<h2>Coordonnees d'un point</h2><p>Dans un repere, un point \\(A\\) est decrit par deux coordonnees \\((x_A, y_A)\\).</p><h3>Exemple</h3><p>Le point \\(A(2, 3)\\) a pour abscisse \\(2\\) et pour ordonnee \\(3\\).</p>",
+      "questions": [
+        {
+          "question": "Que represente l'abscisse d'un point ?",
+          "hidden_answer": "<details><summary><strong>Afficher la reponse</strong></summary><p>L'abscisse est la premiere coordonnee du point. Pour \\(A(2, 3)\\), elle vaut \\(2\\).</p></details>"
+        },
+        {
+          "question": "Que represente l'ordonnee d'un point ?",
+          "hidden_answer": "<details><summary><strong>Afficher la reponse</strong></summary><p>L'ordonnee est la deuxieme coordonnee du point. Pour \\(A(2, 3)\\), elle vaut \\(3\\).</p></details>"
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Dans \\(A(2, 3)\\), quelle est l'abscisse ?",
+          "choices": ["\\(2\\)", "\\(3\\)", "\\(5\\)", "\\(1\\)"],
+          "answer": "\\(2\\)",
+          "explanation": "L'abscisse est la premiere coordonnee du couple \\((2, 3)\\)."
+        },
+        {
+          "question": "Dans \\(A(2, 3)\\), quelle est l'ordonnee ?",
+          "choices": ["\\(2\\)", "\\(3\\)", "\\(5\\)", "\\(1\\)"],
+          "answer": "\\(3\\)",
+          "explanation": "L'ordonnee est la deuxieme coordonnee du couple \\((2, 3)\\)."
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,2 @@
+"""Moodle Python generation package."""
+

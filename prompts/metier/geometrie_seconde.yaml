@@ -1,0 +1,112 @@
+nom: geometrie_seconde
+niveau: seconde_generale
+matiere: mathematiques
+theme: geometrie_analytique
+
+prompt: |
+  Ta mission :
+  Créer une formation complète de géométrie analytique pour la classe de seconde générale française.
+
+  Le résultat doit être un JSON STRICTEMENT VALIDE.
+
+  Le JSON doit respecter EXACTEMENT cette structure :
+
+  {
+    "title": "Titre de la formation",
+    "description": "Description courte",
+    "chapters": [
+      {
+        "title": "Titre du chapitre",
+        "content": "Contenu HTML du chapitre",
+        "questions": [
+          {
+            "question": "Question ouverte",
+            "hidden_answer": "Réponse détaillée cachée"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Question du quiz",
+            "choices": [
+              "Choix 1",
+              "Choix 2",
+              "Choix 3",
+              "Choix 4"
+            ],
+            "answer": "Bonne réponse",
+            "explanation": "Explication détaillée"
+          }
+        ]
+      }
+    ]
+  }
+
+  Créer au minimum 8 chapitres.
+
+  Chaque chapitre doit contenir OBLIGATOIREMENT :
+  - un cours détaillé,
+  - des exemples,
+  - des exercices simples,
+  - des conseils méthodologiques,
+  - des erreurs fréquentes,
+  - 5 questions ouvertes avec réponses cachées,
+  - 5 questions de quiz avec réponses cachées.
+
+  IMPORTANT :
+  - Les réponses des exercices doivent être cachées.
+  - Les réponses des questions ouvertes doivent être cachées.
+  - Les réponses et explications des quiz doivent être placées dans les champs "answer" et "explanation".
+  - Ne pas ajouter de balise <details> dans les champs "answer" et "explanation" des quiz : le rendu Moodle les masquera automatiquement.
+  - Utiliser du HTML compatible Moodle pour masquer les réponses.
+
+  Pour les réponses cachées utiliser EXCLUSIVEMENT cette structure HTML :
+
+  <details>
+    <summary><strong>Afficher la réponse</strong></summary>
+    <p>Contenu de la réponse</p>
+  </details>
+
+  Le champ "content" doit contenir du HTML compatible TinyMCE / Atto Moodle.
+
+  Utiliser uniquement les balises suivantes :
+  <h2>, <h3>, <p>, <ul>, <li>, <strong>, <em>, <details>, <summary>
+
+  REGLE ABSOLUE :
+  Toutes les expressions mathématiques SANS EXCEPTION doivent être encadrées avec les délimiteurs Moodle MathJax :
+  - \\[ ... \\] pour les formules centrées,
+  - \\( ... \\) pour les formules inline.
+
+  Exemples OBLIGATOIRES :
+  - Coordonnées : (x_M, y_M) -> \\(x_M, y_M\\)
+  - Vecteurs : \\vec{AB} -> \\(\\vec{AB}\\)
+  - Symboles : α, β, π -> \\(\\alpha\\), \\(\\beta\\), \\(\\pi\\)
+  - Indices : x_1, y_i -> \\(x_1\\), \\(y_i\\)
+  - Fractions : a/b -> \\(\\frac{a}{b}\\)
+  - Équations : x = y + 2 -> \\[x = y + 2\\]
+  - Points : A(2, 3) -> Point \\(A(2, 3)\\)
+
+  Pas de mathématiques brutes dans le HTML.
+  Chaque variable, symbole, nombre ou opération mathématique doit être enveloppé dans les délimiteurs MathJax.
+
+  IMPORTANT :
+  - JSON strict uniquement
+  - aucun texte avant le JSON
+  - aucun texte après le JSON
+  - pas de markdown
+  - pas de ```json
+  - compatible json.loads() Python
+  - les antislashs doivent être doublés : écrire \\vec{AB} et non \vec{AB}
+
+  IMPORTANT :
+  - Générer uniquement du HTML simple compatible Moodle.
+  - Ne jamais utiliser Markdown.
+  - Ne jamais utiliser LaTeX brut hors délimiteurs Moodle MathJax.
+  - Ne jamais utiliser les doubles underscores __texte__.
+  - Utiliser uniquement :
+    <h2>, <h3>, <p>, <ul>, <li>, <strong>, <em>, <details>, <summary>
+
+  IMPORTANT :
+  - Chaque chapitre doit contenir exactement 5 questions ouvertes.
+  - Chaque chapitre doit contenir exactement 5 questions de quiz.
+  - Chaque question doit avoir sa réponse cachée.
+  - Chaque quiz doit avoir une explication détaillée dans le champ "explanation".
