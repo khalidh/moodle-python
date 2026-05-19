@@ -24,22 +24,24 @@ L'objectif n'est pas seulement de generer un cours. Le projet permet de travaill
 |       |-- config.py                # Configuration par variables d'environnement
 |       |-- services/                # Integrations OpenAI, Moodle, Google Docs
 |       `-- utils/                   # Lecture YAML/texte et sauvegarde JSON
-|-- prompts/
+|-- assets/prompts/
 |   |-- system/                      # Role, normes et comportement global du modele
 |   |-- metier/                      # Demandes pedagogiques par domaine
 |   |-- templates/                   # Gabarits de rendu HTML Moodle
 |   `-- contracts/                   # Schemas et contrats attendus par le pipeline
-|-- examples/                         # Jeux d'essai courts pour ateliers
-|-- evals/                           # Grilles de controle qualite
-|-- workflows/                       # Procedures operationnelles
-|-- docs/
+|-- assets/examples/                         # Jeux d'essai courts pour ateliers
+|-- references/evals/                           # Grilles de controle qualite
+|-- references/workflows/                       # Procedures operationnelles
+|-- references/project/docs/
 |   |-- architecture.md              # Carte technique et pedagogique du projet
 |   |-- backlog-fil-rouge.md         # Progression possible pour la formation
 |   |-- context-engineering/         # Supports sur les couches de contexte
 |   |-- workshops/                   # Ateliers pratiques
 |   `-- decisions/                   # Decisions d'architecture
-|-- output/                          # Artefacts generes localement
-`-- archives/                        # Anciennes variantes ou scripts de reference
+|-- agents/
+|   `-- openai.yaml                  # Metadonnees d'interface Open Skill
+|-- SKILL.md                         # Point d'entree de la competence
+`-- output/                          # Artefacts generes localement
 ```
 
 ## Installation
@@ -62,13 +64,13 @@ Generation et publication Moodle :
 python3 scripts/generation_moodle.py
 ```
 
-Generation Google Docs archivee :
+Generation Google Docs :
 
 ```bash
-python3 archives/genere_mardi_google_docs.py
+python3 scripts/generation_google_docs.py
 ```
 
-La documentation de cette variante est dans `docs/archives/google-docs.md`.
+La documentation de cette variante est dans `references/project/docs/archives/google-docs.md`.
 
 Tests rapides :
 
@@ -76,13 +78,13 @@ Tests rapides :
 venv/bin/python -m pytest
 ```
 
-Les procedures detaillees sont dans `workflows/`.
+Les procedures detaillees sont dans `references/workflows/`.
 
-Pour publier le projet sur GitHub sans exposer `.env` ni les secrets Google, suivre `workflows/publication-github.md`.
+Pour publier le projet sur GitHub sans exposer `.env` ni les secrets Google, suivre `references/workflows/publication-github.md`.
 
 ## Utilisation en formation
 
-Le parcours conseille est de partir du prompt actuel `prompts/metier/geometrie_seconde.yaml`, puis de faire evoluer le projet par increments :
+Le parcours conseille est de partir du prompt actuel `assets/prompts/metier/geometrie_seconde.yaml`, puis de faire evoluer le projet par increments :
 
 1. Cartographier les couches de contexte.
 2. Formaliser le contrat de sortie JSON.
@@ -91,4 +93,4 @@ Le parcours conseille est de partir du prompt actuel `prompts/metier/geometrie_s
 5. Refactorer le pipeline pour separer generation, controle et publication.
 6. Brancher un second domaine metier pour verifier la reutilisabilite.
 
-Les ateliers sont decrits dans `docs/workshops/`.
+Les ateliers sont decrits dans `references/project/docs/workshops/`.

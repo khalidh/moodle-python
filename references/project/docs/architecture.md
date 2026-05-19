@@ -27,14 +27,14 @@ publication dans un livre Moodle
 
 ## Couches de contexte
 
-- Contexte systeme : `prompts/system/pedagogie_moodle.txt`
-- Contexte metier : `prompts/metier/geometrie_seconde.yaml`
-- Contexte de format : `prompts/contracts/course_schema.md`
-- Contexte de rendu : `prompts/templates/moodle_book_chapter_template.html`
+- Contexte systeme : `assets/prompts/system/pedagogie_moodle.txt`
+- Contexte metier : `assets/prompts/metier/geometrie_seconde.yaml`
+- Contexte de format : `assets/prompts/contracts/course_schema.md`
+- Contexte de rendu : `assets/prompts/templates/moodle_book_chapter_template.html`
 - Contexte d'execution : `.env`
-- Contexte d'evaluation : `evals/quality_checklist.md`
-- Exemples stables : `examples/`
-- Procedures operationnelles : `workflows/`
+- Contexte d'evaluation : `references/evals/quality_checklist.md`
+- Exemples stables : `assets/examples/`
+- Procedures operationnelles : `references/workflows/`
 
 ## Responsabilites des modules
 
@@ -49,5 +49,5 @@ publication dans un livre Moodle
 
 - Ajouter une validation structurelle plus stricte.
 - Separer generation, evaluation et publication en commandes distinctes.
-- Utiliser les jeux d'essai courts de `examples/` pour ne pas consommer l'API pendant chaque atelier.
+- Utiliser les jeux d'essai courts de `assets/examples/` pour ne pas consommer l'API pendant chaque atelier.
 - Produire plusieurs prompts metier pour tester la reutilisabilite du cadre.

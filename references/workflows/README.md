@@ -2,10 +2,10 @@
 
 Ce dossier decrit les procedures operationnelles du projet.
 
-Difference avec `docs/workshops/` :
+Difference avec `references/project/docs/workshops/` :
 
-- `docs/workshops/` sert a apprendre et animer des ateliers.
-- `workflows/` sert a executer une tache du projet pas a pas.
+- `references/project/docs/workshops/` sert a apprendre et animer des ateliers.
+- `references/workflows/` sert a executer une tache du projet pas a pas.
 
 ## Workflows disponibles
 

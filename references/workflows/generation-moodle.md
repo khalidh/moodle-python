@@ -43,5 +43,5 @@ venv/bin/python -m pytest
 
 - Erreur `OPENAI_API_KEY` : verifier `.env`.
 - Erreur Moodle HTTP : verifier `MOODLE_URL`, `MOODLE_TOKEN` et les permissions du token.
-- JSON invalide : verifier le prompt metier et le contrat dans `prompts/contracts/course_schema.md`.
-- Template introuvable : verifier `MOODLE_PAGE_TEMPLATE_PATH` ou le fichier `prompts/templates/moodle_book_chapter_template.html`.
+- JSON invalide : verifier le prompt metier et le contrat dans `assets/prompts/contracts/course_schema.md`.
+- Template introuvable : verifier `MOODLE_PAGE_TEMPLATE_PATH` ou le fichier `assets/prompts/templates/moodle_book_chapter_template.html`.

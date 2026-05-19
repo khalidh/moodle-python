@@ -1,0 +1,18 @@
+name: minimal_course_contract
+description: Validate the minimal course fixture against the JSON contract and Moodle XML renderer.
+prompt_path: assets/examples/geometrie_seconde_short.yaml
+course_json_path: assets/examples/formation_minimale.json
+expect:
+  title: Mini formation - Geometrie analytique
+  chapter_count: 1
+  quiz_questions_per_chapter: 2
+  open_questions_per_chapter: 2
+  required_content_fragments:
+    - '<h2>Coordonnees d''un point</h2>'
+    - '<h3>Exemple</h3>'
+  required_prompt_fragments:
+    - 'formation courte'
+    - 'JSON strictement valide'
+  required_xml_fragments:
+    - '<quiz>'
+    - 'type="multichoice"'

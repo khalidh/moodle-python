@@ -1,0 +1,7 @@
+interface:
+  display_name: "Moodle Python"
+  short_description: "Generate and validate Moodle course content"
+  default_prompt: "Use $moodle-python to generate, validate, or adapt a Moodle course with the bundled Python pipeline."
+
+policy:
+  allow_implicit_invocation: true

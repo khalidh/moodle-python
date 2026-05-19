@@ -78,7 +78,7 @@ def load_settings() -> Settings:
         system_prompt_path=generation_settings.system_prompt_path,
         moodle_page_template_path=optional_env(
             "MOODLE_PAGE_TEMPLATE_PATH",
-            "prompts/templates/moodle_book_chapter_template.html",
+            "assets/prompts/templates/moodle_book_chapter_template.html",
         ),
     )
 
@@ -93,9 +93,9 @@ def load_generation_settings(load_env_file: bool = True) -> GenerationSettings:
         output_dir=optional_env("OUTPUT_DIR", "output"),
         metier_prompt_path=optional_env(
             "METIER_PROMPT_PATH",
-            optional_env("PROMPT_PATH", "prompts/metier/geometrie_seconde.yaml"),
+            optional_env("PROMPT_PATH", "assets/prompts/metier/geometrie_seconde.yaml"),
         ),
-        system_prompt_path=optional_env("SYSTEM_PROMPT_PATH", "prompts/system/pedagogie_moodle.txt"),
+        system_prompt_path=optional_env("SYSTEM_PROMPT_PATH", "assets/prompts/system/pedagogie_moodle.txt"),
     )
 
 

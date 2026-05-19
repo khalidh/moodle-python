@@ -6,10 +6,10 @@ Passer d'une consigne de generation a un contrat exploitable par le code.
 
 ## Point de depart
 
-- `prompts/contracts/course_schema.md`
-- `examples/formation_minimale.json`
+- `assets/prompts/contracts/course_schema.md`
+- `assets/examples/formation_minimale.json`
 - `src/moodle_python/services/openai_service.py`
-- `evals/quality_checklist.md`
+- `references/evals/quality_checklist.md`
 
 ## Deroule
 

@@ -47,7 +47,8 @@ Le modele doit produire uniquement un objet JSON valide.
 
 - `chapters` doit etre une liste.
 - Chaque chapitre doit contenir exactement 5 questions ouvertes.
-- Chaque chapitre doit contenir exactement 5 questions de quiz.
+- Le nombre d'exercices par chapitre est defini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.exercises_per_chapter`.
+- Le nombre de questions de quiz par chapitre est defini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.quiz_questions_per_chapter`.
 - Le HTML doit rester compatible Moodle.
 - Les mathematiques doivent etre encadrees avec les delimiteurs MathJax Moodle.
 - Les champs `answer` et `explanation` des quiz ne contiennent pas de balise `<details>`.

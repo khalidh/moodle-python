@@ -20,7 +20,7 @@ Ce workflow est secondaire. Le flux principal du projet reste Moodle.
 ## Lancement
 
 ```bash
-python3 archives/genere_mardi_google_docs.py
+python3 scripts/generation_google_docs.py
 ```
 
 ## Sorties attendues
@@ -31,5 +31,5 @@ python3 archives/genere_mardi_google_docs.py
 
 ## Documentation detaillee
 
-Voir `docs/archives/google-docs.md`.
+Voir `references/project/docs/archives/google-docs.md`.
 

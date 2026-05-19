@@ -1,6 +1,6 @@
 # Génération de Formation vers Google Docs
 
-Ce script `archives/genere_mardi_google_docs.py` génère une formation de géométrie analytique en utilisant OpenAI et la publie automatiquement dans un document Google Docs.
+Ce script `scripts/generation_google_docs.py` génère une formation de géométrie analytique en utilisant OpenAI et la publie automatiquement dans un document Google Docs.
 
 ## Prérequis
 
@@ -32,8 +32,8 @@ Créez un fichier `.env` dans le dossier racine avec :
 OPENAI_API_KEY=votre_clé_openai
 OPENAI_MODEL=gpt-4.1-mini
 OPENAI_TEMPERATURE=0.4
-METIER_PROMPT_PATH=prompts/metier/geometrie_seconde.yaml
-SYSTEM_PROMPT_PATH=prompts/system/pedagogie_moodle.txt
+METIER_PROMPT_PATH=assets/prompts/metier/geometrie_seconde.yaml
+SYSTEM_PROMPT_PATH=assets/prompts/system/pedagogie_moodle.txt
 GOOGLE_CREDENTIALS_PATH=secrets/google/credentials.json
 GOOGLE_TOKEN_PATH=secrets/google/token.pickle
 GOOGLE_DOC_TITLE=Formation - Géométrie analytique - Seconde
@@ -44,7 +44,7 @@ GOOGLE_DOC_TITLE=Formation - Géométrie analytique - Seconde
 Lancez le script :
 
 ```bash
-python archives/genere_mardi_google_docs.py
+python scripts/generation_google_docs.py
 ```
 
 Le script va :

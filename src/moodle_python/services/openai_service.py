@@ -8,10 +8,27 @@ from openai import OpenAI
 logger = logging.getLogger("generation_moodle")
 
 
+def format_prompt_parameter(value: Any) -> str:
+    if isinstance(value, list):
+        return "\n".join(f"- {item}" for item in value)
+    return str(value)
+
+
+def flatten_prompt_parameters(data: Dict[str, Any]) -> Dict[str, str]:
+    parameters = data.get("parametres", {})
+    if not isinstance(parameters, dict):
+        raise ValueError("La clé 'parametres' du YAML métier doit être un objet si elle est présente.")
+    return {key: format_prompt_parameter(value) for key, value in parameters.items()}
+
+
 def build_user_prompt(prompt_data: Dict[str, Any]) -> str:
     prompt = prompt_data.get("prompt")
     if not isinstance(prompt, str) or not prompt.strip():
         raise ValueError("Le YAML métier doit contenir une clé 'prompt' non vide.")
+
+    for key, value in flatten_prompt_parameters(prompt_data).items():
+        prompt = prompt.replace("{{" + key + "}}", value)
+
     return prompt.strip()
 
 

@@ -15,19 +15,19 @@ Questions a poser :
 
 ## 2. Role du modele
 
-Fichier : `prompts/system/pedagogie_moodle.txt`
+Fichier : `assets/prompts/system/pedagogie_moodle.txt`
 
 Le prompt systeme fixe l'identite professionnelle du modele et les regles globales : pedagogie, Moodle, JSON strict.
 
 ## 3. Contexte metier
 
-Fichier : `prompts/metier/geometrie_seconde.yaml`
+Fichier : `assets/prompts/metier/geometrie_seconde.yaml`
 
 Le prompt metier porte le sujet, le niveau, le volume attendu, les contraintes HTML et les regles MathJax.
 
 ## 4. Contrat de sortie
 
-Fichier : `prompts/contracts/course_schema.md`
+Fichier : `assets/prompts/contracts/course_schema.md`
 
 Le contrat de sortie decrit la structure que le code Python attend. C'est le lien entre prompt engineering et software engineering.
 
@@ -42,7 +42,7 @@ Les sorties sont consommees par :
 
 ## 6. Evaluation
 
-Fichier : `evals/quality_checklist.md`
+Fichier : `references/evals/quality_checklist.md`
 
 La qualite ne se limite pas a "le modele a repondu". On verifie la structure, la pedagogie, le rendu Moodle, la securite de publication et la maintenabilite.
 

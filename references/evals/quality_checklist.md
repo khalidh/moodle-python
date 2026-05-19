@@ -8,7 +8,8 @@ Utiliser cette grille apres chaque generation.
 - La racine contient `title`, `description`, `chapters`.
 - Chaque chapitre contient `title`, `content`, `questions`, `quiz`.
 - Chaque chapitre contient exactement 5 questions ouvertes.
-- Chaque chapitre contient exactement 5 quiz.
+- Chaque chapitre contient le nombre d'exercices defini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.exercises_per_chapter`.
+- Chaque chapitre contient le nombre de quiz defini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.quiz_questions_per_chapter`.
 - Chaque quiz contient exactement 4 choix.
 - La bonne reponse correspond exactement a un des choix.
 
@@ -36,4 +37,3 @@ Utiliser cette grille apres chaque generation.
 - Le probleme rencontre peut etre rattache a une couche de contexte.
 - L'amelioration proposee peut etre testee.
 - La modification du prompt ne casse pas le contrat aval.
-

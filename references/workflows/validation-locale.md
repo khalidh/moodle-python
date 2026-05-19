@@ -22,13 +22,19 @@ venv/bin/python -m pytest
 Verifier que l'exemple JSON est valide :
 
 ```bash
-venv/bin/python -m json.tool examples/formation_minimale.json
+venv/bin/python -m json.tool assets/examples/formation_minimale.json
 ```
 
 Verifier que les modules Python compilent :
 
 ```bash
-venv/bin/python -m py_compile scripts/generation_moodle.py archives/genere_mardi_google_docs.py src/moodle_python/config.py src/moodle_python/services/openai_service.py src/moodle_python/services/moodle_service.py src/moodle_python/services/google_docs_service.py src/moodle_python/utils/file_loader.py
+venv/bin/python -m py_compile scripts/generation_moodle.py scripts/generation_google_docs.py src/moodle_python/config.py src/moodle_python/services/openai_service.py src/moodle_python/services/moodle_service.py src/moodle_python/services/google_docs_service.py src/moodle_python/utils/file_loader.py
+```
+
+Executer les scenarios de harness :
+
+```bash
+venv/bin/python scripts/run_harness.py
 ```
 
 ## Sortie attendue
@@ -36,7 +42,7 @@ venv/bin/python -m py_compile scripts/generation_moodle.py archives/genere_mardi
 Les tests doivent afficher :
 
 ```text
-6 passed
+10 passed
 ```
 
 ## Interpretation

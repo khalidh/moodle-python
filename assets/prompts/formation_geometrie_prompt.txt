@@ -42,10 +42,10 @@ Créer au minimum 8 chapitres.
 Chaque chapitre doit contenir :
 - un cours détaillé,
 - des exemples,
-- des exercices simples,
+- des exercices simples dont le nombre est défini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.exercises_per_chapter`,
 - des conseils méthodologiques,
 - des erreurs fréquentes,
-- un mini quiz de 5 questions.
+- un mini quiz dont le nombre de questions est défini dans `assets/prompts/metier/geometrie_seconde.yaml`, clé `parametres.quiz_questions_per_chapter`.
 
 Les réponses et explications du mini quiz doivent rester uniquement dans les champs "answer" et "explanation".
 Ne pas afficher les corrections du quiz dans le champ "content".
